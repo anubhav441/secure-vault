@@ -1,0 +1,37 @@
+@import "tailwindcss/preflight";
+@tailwind utilities;
+@reference "tailwindcss/theme";
+
+body {
+  @apply bg-gray-900 text-gray-100 antialiased;
+}
+
+:root {
+  --toast-background: #2d3748; 
+  --toast-color: #f7fafc;      
+  --toast-success-color: #38a169; 
+  --toast-error-color: #e53e3e;   
+}
+
+input[type='range'] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+}
+input[type='range']::-webkit-slider-runnable-track {
+    @apply h-2 rounded-full bg-gray-700;
+}
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: -5px; 
+    @apply h-5 w-5 rounded-full bg-indigo-500 shadow-lg;
+}
+input[type='range']::-moz-range-track {
+    @apply h-2 rounded-full bg-gray-700;
+}
+input[type='range']::-moz-range-thumb {
+    border: none;
+    @apply h-5 w-5 rounded-full bg-indigo-500 shadow-lg;
+}
